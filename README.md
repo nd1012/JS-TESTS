@@ -26,7 +26,7 @@ class Test extends Tests{
 
 All methods having the `_Test` postfix will be executed (a test method may be synchronous or asynchronous).
 
-**TIP**: [Have a look at the tests](tests/tests.tests.js) (especially the `Tests_Tests_Ok` sub-test class) and the [tests.html](tests/tests.html) for more examples.
+**TIP**: [Have a look at the tests](tests/tests.tests.js) (especially the `Tests_Tests_Ok` sub-test class) and the [tests.html](tests/tests.html) for more examples. For a demonstration, you can [run the tests in your browser](https://nd1012.github.io/JS-TESTS/index.html).
 
 You could also run the tests of `Test` using the `RunTests` method:
 
