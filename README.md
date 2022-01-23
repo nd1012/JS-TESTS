@@ -74,14 +74,20 @@ Any_Test(){
 
 ## Support
 
-- Synchronous test methods
-- Asynchronous test methods
-- Assertion (conditional, equal, not equal, type, not type, exception*, no exception*)
-- Catch* non-asserting test code exception
-- Benchmark of and (custom) for the tests
-- Direct test class execution (a test class is a test result, too)
-- Execution of multiple test classes for combined test results (will be returned as combined test result object)
+- Synchronous and asynchronous test methods
+- Assertions
+	- `Assert`: conditional
+	- `AssertEqual`: comparing (optional strict mode)
+	- `AssertNotEqual`: not comparing (optional strict mode)
+	- `AssertType`: type (using a type or a type name)
+	- `AssertNotType`: not type (using a type or a type name)
+	- `AssertException` and `AssertExceptionAsync`: exception
+	- `AssertNotException` and `AssertNotExceptionAsync`: not exception
+- Catch non-asserting test code exception
+	- `Catch`
+	- `CatchAsync`
+- Benchmark of and (custom) for the tests (customs using `Benchmark`)
+- Direct test class execution using `RunTests` (a test class is a test result, too)
+- Execution of multiple test classes for combined test results using static `Tests.RunAllTests` (will be returned as combined test result object)
 - Grouped JavaScript console output
-- Assertion error type
-
-(*)  (synchronous/asynchronous)
+- Assertion error type `AssertionError`

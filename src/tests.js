@@ -277,7 +277,7 @@ class Tests extends TestResults{
 	AssertType(obj,type){
 		this.Assertions++;
 		this.#TestAssertions++;
-		if(typeof type=='string'?typeof obj!=type:!(obj instanceof type)){
+		if(typeof type=='string'?typeof obj!=type&&obj?.constructor?.name!=type:!(obj instanceof type)){
 			if(!this._IsTestsFailtest) console.groupEnd();
 			console.warn(obj,type);
 			if(!this._IsTestsFailtest) debugger;
@@ -296,7 +296,7 @@ class Tests extends TestResults{
 	AssertNotType(obj,type){
 		this.Assertions++;
 		this.#TestAssertions++;
-		if(typeof type=='string'?typeof obj==type:obj instanceof type){
+		if(typeof type=='string'?typeof obj==type||obj?.constructor?.name==type:obj instanceof type){
 			if(!this._IsTestsFailtest) console.groupEnd();
 			console.warn(obj,type);
 			if(!this._IsTestsFailtest) debugger;
