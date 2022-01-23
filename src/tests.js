@@ -1,5 +1,9 @@
 /**
  * Test results
+ * 
+ * @github https://github.com/nd1012/JS-TESTS
+ * @license MIT
+ * @copyright (c)2022 Andreas Zimmermann, wan24.de
  */
 class TestResults{
 	/**
@@ -552,6 +556,10 @@ class Tests extends TestResults{
 
 /**
  * Assertion error
+ * 
+ * @github https://github.com/nd1012/JS-TESTS
+ * @license MIT
+ * @copyright (c)2022 Andreas Zimmermann, wan24.de
  */
 class AssertionError extends Error{
 	/**
