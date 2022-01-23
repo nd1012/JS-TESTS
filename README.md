@@ -26,6 +26,8 @@ class Test extends Tests{
 
 All methods having the `_Test` postfix will be executed (a test method may be synchronous or asynchronous).
 
+**TIP**: [Have a look at the tests](tests/tests.tests.js) (especially the `Tests_Tests_Ok` sub-test class) and the [tests.html](tests/tests.html) for more examples.
+
 You could also run the tests of `Test` using the `RunTests` method:
 
 ```js
@@ -34,11 +36,13 @@ await (new Test()).RunTests();
 
 Of course you can only run one specific test (without benchmark or assertion count):
 
-**TIP**: To temporary disable a test, simply make it a private method (add the `#` prefix to the method name).
-
 ```js
 (new Test()).Example_Test();
 ```
+
+If you want to run multiple single test methods, you might want to reset the test results before, by calling the `Reset` method.
+
+**TIP**: To temporary disable a test, simply make it a private method (add the `#` prefix to the method name).
 
 ### Catch non-assertion test code exception
 
@@ -56,17 +60,28 @@ The `Catch` method will re-throw the error, because testing should be interrupte
 
 For asynchronous test code use `CatchAsync`.
 
+### Benchmark
+
+The `Benchmark` method will return the start time and output the runtime to the console, if the start time was given as a parameter:
+
+```js
+Any_Test(){
+	let start=this.Benchmark();
+	this.Assert(AnyType.AnyMethod());
+	this.Benchmark(start);
+}
+```
+
 ## Support
 
 - Synchronous test methods
 - Asynchronous test methods
-- Assertion
-- Exception assertion
-- Equal / not equal assertion
-- Catch non-asserting test code exception
-- Assertion error type
-- Assertion count
-- Benchmark
-- Direct test class execution
-- Execution of multiple test classes
+- Assertion (conditional, equal, not equal, type, not type, exception*, no exception*)
+- Catch* non-asserting test code exception
+- Benchmark of and (custom) for the tests
+- Direct test class execution (a test class is a test result, too)
+- Execution of multiple test classes for combined test results (will be returned as combined test result object)
 - Grouped JavaScript console output
+- Assertion error type
+
+(*)  (synchronous/asynchronous)
