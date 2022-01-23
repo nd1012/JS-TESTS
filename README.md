@@ -79,8 +79,8 @@ Any_Test(){
 	- `Assert`: conditional
 	- `AssertEqual`: comparing (optional strict mode)
 	- `AssertNotEqual`: not comparing (optional strict mode)
-	- `AssertType`: type (using a type or a type name)
-	- `AssertNotType`: not type (using a type or a type name)
+	- `AssertType`: type (using a type or a type name, optional strict mode)
+	- `AssertNotType`: not type (using a type or a type name, optional strict mode)
 	- `AssertException` and `AssertExceptionAsync`: exception
 	- `AssertNotException` and `AssertNotExceptionAsync`: not exception
 - Catch non-asserting test code exception
